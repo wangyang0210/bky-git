@@ -2,7 +2,7 @@
     <van-popup class="game-rules custom" v-model="showRules">
         <div class="container">
             <div class="top-header">
-                <img src="/static/images/knot@3x.png" alt="">
+                <img src="../assets/images/knot@3x.png" alt="">
             </div>
             <div class="box-container">
                 <div class="first"></div>
@@ -11,14 +11,14 @@
                     <div class="detail">
                         <!-- 答题 -->
                         <div class="detail-title">
-                            <img src="/static/images/rule@3x.png" alt="">
+                            <img src="../assets/images/rule@3x.png" alt="">
                             方法一：登陆
                         </div>
                         <div class="detail-item">
                             <p>首次登入活动主页，即可获取<span class="gold-text">5个</span>金币</p>
                         </div>
                         <div class="detail-title">
-                            <img src="/static/images/rule@3x.png" alt="">
+                            <img src="../assets/images/rule@3x.png" alt="">
                             方法二：邀请
                         </div>
                         <div class="detail-item">
@@ -26,19 +26,19 @@
                             <!-- ，2位好友，获得<span class="gold-text">10+2个</span>金币，n位好友获得<span class="gold-text">10个</span>金币 -->
                         </div>
                         <div class="detail-title">
-                            <img src="/static/images/rule@3x.png" alt="">
+                            <img src="../assets/images/rule@3x.png" alt="">
                             方法三：充值
                         </div>
                         <div class="detail-item">
                             <p>用户可通过“我的”-“充值”，进行充值</p>
                         </div>
                          <div class="detail-title">
-                            <img src="/static/images/rule@3x.png" alt="">
+                            <img src="../assets/images/rule@3x.png" alt="">
                             方法四：关注公众号
                         </div>
                         <div class="detail-item">
                             <p>新用户关注公众号「百万智库达人」，即可获取<span class="gold-text">10个</span>金币</p>
-                            <img  class="img" src="/static/images/3ec37d2fae58c3b1a6c21839799feeb.jpg" alt="">
+                            <img  class="img" src="../assets/images/3ec37d2fae58c3b1a6c21839799feeb.jpg" alt="">
                         </div>
                     </div>
                     <span class="iknow raise-button orange" @click="close">知道了</span>

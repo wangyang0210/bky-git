@@ -1,7 +1,11 @@
 {
     "pages": [
-        "pages/my/main",
+        "pages/detail/main",
         "pages/index/main",
+        "pages/my/main",
+        "pages/my/prize/main",
+        "pages/my/join/main",
+        "pages/my/pay/main",
         "pages/draw/main"
     ],
     "window": {
@@ -15,25 +19,21 @@
         "backgroundColor": "#fafafa",
         "selectedColor": "#e55044",
         "borderStyle": "white",
-        "list": [
-          {
+        "list": [{
             "text": "奖品场",
             "pagePath": "pages/index/main",
             "iconPath": "static/tabs/gift.png",
             "selectedIconPath": "static/tabs/gift-active.png"
-          }, {
+        }, {
             "text": "发起抽奖",
             "pagePath": "pages/draw/main",
             "iconPath": "static/tabs/draw.png",
             "selectedIconPath": "static/tabs/draw-active.png"
-          }, {
+        }, {
             "text": "我的",
             "pagePath": "pages/my/main",
             "iconPath": "static/tabs/my.png",
             "selectedIconPath": "static/tabs/my-active.png"
         }]
-
-      
-      
     }
 }

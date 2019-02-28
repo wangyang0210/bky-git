@@ -2,7 +2,7 @@
     <van-popup class="game-rules custom" v-model="showRules">
         <div class="container">
             <div class="top-header">
-                <img src="/static/images/knot@3x.png" alt="">
+                <img src="../assets/images/knot@3x.png" alt="">
             </div>
             <div class="box-container">
                 <div class="first"></div>
@@ -11,7 +11,7 @@
                     <div class="detail">
                         <!-- 答题 -->
                         <div class="detail-title">
-                            <img src="/static/images/rule@3x.png" alt="">
+                            <img src="../assets/images/rule@3x.png" alt="">
                             答题
                         </div>
                         <div class="detail-item">
@@ -22,7 +22,7 @@
                             <p>4.抽奖机会越多中奖机会越大</p>
                         </div>
                         <div class="detail-title">
-                            <img src="/static/images/rule@3x.png" alt="">
+                            <img src="../assets/images/rule@3x.png" alt="">
                             开奖
                         </div>
                         <div class="detail-item">
@@ -30,7 +30,7 @@
                             <p>2.中奖结果可在“我的”-“奖品记录”中查看</p>
                         </div>
                         <div class="detail-title">
-                            <img src="/static/images/rule@3x.png" alt="">
+                            <img src="../assets/images/rule@3x.png" alt="">
                             领奖
                         </div>
                         <div class="detail-item">

@@ -3,9 +3,9 @@
         <div class="container">
             <!-- 题目图片 -->
             <div class="top-header">
-                <img v-if="current==1" src="/static/images/firstQ@3x.png" alt="">
-                <img v-else-if="current==2" src="/static/images/secondQ@3x.png" alt="">
-                <img v-else src="/static/images/thirdQ@3x.png" alt="">
+                <img v-if="current==1" src="../assets/images/firstQ@3x.png" alt="">
+                <img v-else-if="current==2" src="../assets/images/secondQ@3x.png" alt="">
+                <img v-else src="../assets/images/thirdQ@3x.png" alt="">
             </div>
             <div class="box-container" v-if="question&&question.question">
                 <van-circle
@@ -83,7 +83,7 @@
                     .catch((err)=>{
                         this.$toast.fail("出错了");
                     })
-            },
+            },  
             close() {
                 this.showDiv = false;
             },
@@ -96,7 +96,7 @@
                         if(res.data.error == 1) {
                             if(this.current == this.totalNum) {
                                 this.goResult({
-                                    status:'success',
+                                    status:'success', 
                                     data: res.data});
                             } else {
                                 return res;

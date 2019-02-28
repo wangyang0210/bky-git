@@ -36,7 +36,7 @@
                         </div>
                         <div class="line">
                             <span class="gold-text">
-                                <img class="gold" src="/static/images/gold@3x.png" alt="">{{item.use_gold}}
+                                <img class="gold" src="../assets/images/gold@3x.png" alt="">{{item.use_gold}}
                             </span>
                             <span class="right grey-text">{{item.user_count||item.played}}人{{item.is_end==1?'关注奖品':'正在参与'}}</span>
                         </div>
@@ -63,7 +63,7 @@
                                     <span class="text-num">{{item.money}}</span>
                             </span>
                             <span>
-                                <img class="gold" src="/static/images/gold2@3x.png" alt="">
+                                <img class="gold" src="../assets/images/gold2@3x.png" alt="">
                                 <span class="text-num">{{item.use_gold}}</span>
                             </span>
                             <span class="right">
@@ -105,7 +105,7 @@
             formatDate: function(value) {
                 if(!value) return '';
                 return moment(new Date(value * 1000)).format('MM-DD HH:mm');
-            }
+            }  
         },
         props: {
             list:{

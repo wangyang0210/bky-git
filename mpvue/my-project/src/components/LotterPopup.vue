@@ -4,10 +4,10 @@
         <!-- <div>{{closeOnDiv}}</div> -->
         <div class="container" v-if="success">
             <div class="bg-light">
-                <img src="/static/images/light.png" alt="">
+                <img src="../assets/images/light.png" alt="">
             </div>
             <div class="top-header">
-                <img src="/static/images/congrad@3x.png" alt="">
+                <img src="../assets/images/congrad@3x.png" alt="">
             </div>
             <div class="box-container">
                 <div class="red-part">
@@ -16,7 +16,7 @@
 
                     <div class="prize-img">
                         <img v-if="detail.gift_img" :src="detail.gift_img" alt="">
-                        <img v-else src="/static/images/tissue@3x.png" />
+                        <img v-else src="../assets/images/tissue@3x.png" />
                     </div>
                     <div v-if="detail.open_time">开奖时间：{{detail.open_time}}</div>
                 </div>
@@ -33,14 +33,14 @@
         <!-- 很遗憾 -->
         <div class="container" v-else>
             <div class="top-header">
-                <img src="/static/images/sad@3x.png" alt="">
+                <img src="../assets/images/sad@3x.png" alt="">
             </div>
             <div class="box-container">
                 <div class="red-part fail">
                         <div>您与奖品只有一步之遥</div>
                 </div>
                 <div class="fail-img">
-                    <img src="/static/images/cry@3x.png" />
+                    <img src="../assets/images/cry@3x.png" />
                 </div>
                 <div class="white-part fail">
                         <div>听说乐于分享的人运气会更好哦</div>
@@ -104,9 +104,9 @@
             border-radius: 8px;
             overflow: hidden;
         }
-
+        
         .bg-light img{
-
+          
         }
         .red-part {
             background: linear-gradient(to right, #E13333 , #E96C54);

@@ -1,0 +1,88 @@
+@red: #E55044;
+@red-shadow: #CE0F09;
+@orange: #FA9419;
+@orange-shadow: #CE6209;
+@answer-button: #FFB426;
+
+.raise-button {
+    height: 40px;
+    line-height: 40px;
+    width: 140px;
+    border-radius: 8px;
+    display: inline-block;
+    &.red {
+        color: #fff;
+        background-color: @red;
+        box-shadow: 0px 3px 1px @red-shadow;
+        &:active {
+            background-color: darken(@red,10%);
+        }
+    }
+    &.orange {
+        color: #fff;
+        background-color: @orange;
+        box-shadow: 0px 3px 1px @orange-shadow;&:active {
+            background-color: darken(@orange,10%);
+        }
+    }
+}
+
+.flat-button {
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    display: inline-block;
+    // border: 0;
+    border-width: 0;
+    text-align:center;
+    // box-sizing: border-box;
+    &.red {
+        background: linear-gradient(to right, #E96C54 ,#E13333);
+        &:active {
+            background-color: @red;
+        }
+    }
+    &.yellow {
+        background: linear-gradient(to right, #FFE493, #FDC536);
+        &:active {
+            background-color: @orange;
+        }
+    }
+}
+
+.answer-button {
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    background-color: @answer-button;
+    width: 100%;
+    padding: 10px 0;
+    color: #fff;
+    box-shadow: 0px 3px 1px #FFA700;
+
+    &:active {
+        background-color: darken( @answer-button,8%);
+    }
+
+    .white-line, .white-dot {
+        position: absolute;
+        display: inline-block;
+        background-color: #fff;
+        top: 3px;
+        height: 2px;
+        border-radius: 2px;
+    }
+
+    .white-line {
+        left: 7px;
+        width: 50px;
+    }
+
+    .white-dot {
+        left: 62px;
+        width: 2px;
+    }
+}
+

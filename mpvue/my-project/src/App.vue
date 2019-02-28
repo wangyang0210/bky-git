@@ -30,22 +30,9 @@ export default {
 }
 </script>
 
-<style>
-@import "./../static/iconfont/iconfont.css";
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: caenter;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-}
-/* this rule will be remove */
-* {
-  transition: width 2s;
-  -moz-transition: width 2s;
-  -webkit-transition: width 2s;
-  -o-transition: width 2s;
-}
+<style lang="less">
+  @import "./../static/iconfont/iconfont.css";
+  @import "./../static/less/global.less";
+  @import "./../static/less/button.less";
+  @import "./../static/less/popup.less";
 </style>

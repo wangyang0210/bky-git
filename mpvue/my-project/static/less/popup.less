@@ -1,0 +1,37 @@
+.van-popup.custom {
+    width: calc(100% - 40px);
+    background-color: transparent;
+    overflow-y: visible;
+    // position: relative;
+
+    .container {
+        position: relative;
+        width: 100%;
+    }
+
+    .bg-light {
+        position: absolute;
+        z-index: 98;
+        left: -20px;
+        right: -20px;
+        top: -110px;
+        img {
+            width: 100%;
+        }
+    }
+
+    .top-header {
+        width: 100%;
+        z-index: 99;
+        position: absolute;
+    }
+
+    .box-container {
+        position: relative;
+        width:100%;
+        z-index: 98;
+        box-sizing: border-box;
+        // max-height: 440px;
+        // overflow-y: auto;
+    }
+}

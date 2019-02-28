@@ -15,7 +15,7 @@ export default {
   data () {
     return {
       danmuVisible: false, //弹幕是否渲染，true为渲染
-      danmuImg: require("/static/images/avatar.png"),
+      danmuImg: require("../assets/images/avatar.png"),
       danmuUser: "实例销毁之前调用。在这一步，实例仍然完全可用。",
       danmuTimer: null,
       danmuGame: '小凤凤',

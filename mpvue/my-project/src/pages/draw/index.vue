@@ -2,9 +2,9 @@
   <div class="draw-view">
     <div class="draw-head">
       <div class="text-area">
-        选择奖品<i class="iconfont icon-jiantour"></i>获奖者地址<i class="iconfont icon-jiantour"></i> 包邮送到家
+         选择奖品 <span class="iconfont icon-jiantour"> </span> 获奖者地址 <span class="iconfont icon-jiantour"></span> 包邮送到家
       </div>
-      <div class="opera" @click="operaManual">操作指南</div>
+      <div class="opera" >操作指南</div>
     </div>
     <div class="prize-set">
       <span class="gray-text text-postion">设置奖品</span>
@@ -18,6 +18,8 @@
               <label class="label-text" for="prizeName">奖品名称</label>
               <van-field
                 class="input"
+                adjust-position="true"
+                input-align="right"
                 id="prize"
                 name="prizeName"
                 v-model="contactFormData.prizeName"
@@ -28,6 +30,8 @@
               <label class="label-text" for="prizeNumber">奖品数量</label>
               <van-field
                 class="input"
+                adjust-position="true"
+                input-align="right"
                 id="prizeNumber"
                 name="prizeNumber"
                 type="number"
@@ -42,6 +46,8 @@
               <label class="label-text" for="userName">联系人</label>
               <van-field
                 class="input"
+                adjust-position="true"
+                input-align="right"
                 id="userName"
                 name="userName"
                 v-model="contactFormData.userName"
@@ -52,6 +58,8 @@
               <label class="label-text" for="mobile">联系电话</label>
               <van-field
                 class="input"
+                adjust-position="true"
+                input-align="right"
                 id="mobile"
                 name="mobile"
                 type="number"
@@ -64,6 +72,8 @@
               <label class="label-text" for="goodsLink">商品链接</label>
               <van-field
                 class="input"
+                adjust-position="true"
+                input-align="right"
                 id="goodsLink"
                 name="goodsLink"
                 v-model="contactFormData.goodsLink"
@@ -74,6 +84,7 @@
               <label class="label-text" for="prize">备注信息</label>
               <van-field
                 class="input-big"
+                adjust-position="true"
                 type="textarea"
                 id="remark"
                 name="remark"
@@ -107,12 +118,7 @@ export default {
         remark: ''
       }
     }
-  },
-  methods: {
-    operaManual () {
-      window.location.href="https://www.baidu.com";
-    }
-  },
+  }
 }
 </script>
 <style scoped>
@@ -136,20 +142,20 @@ html {
     .text-area {
       position: relative;
       width: 250px;
-      .iconfont {
-        width: 20px;
-      }
+      line-height:50px;
+      margin:0 15px;
     }
     .opera {
-      color: #fff;
-      width: 60px;
-      height: 20px;
-      line-height: 20px;
-      border: 1px solid #fff;
-      border-radius: 10px;
-      position: relative;
-      right: -300px;
-      top: -35px;
+      color:#fff;
+      width:60px;
+      height:20px;
+      line-height:20px;
+      border:2rpx solid #fff;
+      border-radius:10px;
+      position:relative;
+      right:-290px;
+      top:-35px;
+      padding-left:10px;
     }
   }
   .prize-set {
@@ -157,68 +163,54 @@ html {
     position: absolute;
     font-size: 14px;
     background-color: #f5f5f5;
+    overflow-x: hidden;
     .text-postion {
-      // width:280px;
       line-height: 80px;
       position: relative;
-      left: -145px;
+      left: 15px;
     }
     .img {
-      position: relative;
-      width: 340px;
-      height: 170px;
-      background-image: url(/static/images/draw.png);
-      background-size: 100%;
-      background-repeat: no-repeat;
-      // left: 18px;
-      top: -14px;
-    }
-    /deep/.img-inputer--light {
-      border: none !important;
-    }
-    /deep/.img-inputer__placeholder {
-      opacity: 0 !important;
-    }
-    /deep/.img-inputer--light .img-inputer__icon {
-      opacity: 0;
-    }
-    /deep/.img-inputer__file-name {
-      opacity: 0;
-    }
-    /deep/.img-inputer__change {
-      opacity: 0;
+      position:relative;
+      width:685rpx;
+      height:170px;
+      background:url("http://cache.wangyangyang.vip/draw.png") no-repeat;
+      background-size:100%;
+      top:-14px;
+      // border-radius:10px;
+      left:15px;
     }
 
     .img-text {
-      font-size: 0.48rem;
-      color: #ccc;
-      width: 4rem;
-      height: 1.2rem;
-      line-height: 1.2rem;
-      border: 1px solid #ccc;
-      border-radius: 0.24rem;
-      position: relative;
-      left: 10.1rem;
-      top: -7.4rem;
-      z-index: 99;
+      font-size:14px;
+      color:#ccc;
+      width:94px;
+      height:29px;
+      line-height:29px;
+      border:2rpx solid #ccc;
+      border-radius:20rpx;
+      position:relative;
+      z-index:99;
+      left:233px;
+      padding-left:10px;
+      top:4.5px;
     }
     .form-area {
       width: 100%;
-      position: relative;
       bottom: 1.88rem;
       .form-wrap {
         width: 340px;
         position: relative;
         left: 20px;
-        .van-cell-group {
-          background-color: #f5f5f5 !important;
-        }
         .form-item {
           width: 100%;
           height: 50px;
           margin: 5px 0;
           border-radius: 10px;
           background-color: #fff;
+        /deep/.van-cell {
+            width: 240px !important;
+            position: static !important;
+          }
           .label-text {
             font-size: 16px;
             display: inline-block;
@@ -226,42 +218,28 @@ html {
             height: 50px;
             text-align: left;
             line-height: 48px;
+            padding-left:10px;
           }
           .input {
             position: relative;
-            width: 180px;
             top: -47px;
-            right: -151px;
+            right: -77px;
           }
-          .input-big {
-            width: 100%;
-            position: absolute;
-            // top: -80px;
-            height: 89px;
-          }
+  
         }
       }
-      /deep/.form-item .van-field__control {
-        font-size: 0.48rem;
-        text-align: right;
-      }
-      /deep/.form-item .input-big .van-field__control {
-        font-size: 0.48rem;
-        text-align: left;
-      }
       .submit-btn {
-        width: 14rem;
-        height: 1.5rem;
-        line-height: 1.5rem;
-        -webkit-border-radius: 0.6rem;
-        -moz-border-radius: 0.6rem;
-        border-radius: 0.6rem;
-        background-color: #ff5d5d;
-        // margin: 0.6rem auto 0;
-        margin: 0.6rem 0.6rem;
-        font-size: 0.55rem;
-        text-align: center;
-        color: #fff;
+        width:645rpx;
+        height:72rpx;
+        line-height:72rpx;
+        -webkit-border-radius:60rpx;
+        -moz-border-radius:60rpx;
+        border-radius:60rpx;
+        background-color:#ff5d5d;
+        margin:60rpx 60rpx;
+        font-size:35rpx;
+        text-align:center;
+        color:#fff;
       }
       .submit-btn:active {
         background-color: #ff4346;
@@ -274,5 +252,6 @@ html {
   .h200 {
     height: 150px !important;
   }
+
 }
 </style>

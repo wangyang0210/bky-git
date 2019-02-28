@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "充值特惠",
+    "usingComponents": {
+        "van-popup": "/static/vant/popup/index"
+    }
+}

@@ -4,10 +4,10 @@
         <!-- 恭喜你 -->
         <div class="container" v-if="status=='success'">
             <div class="bg-light">
-                <img src="/static/images/light.png" alt="">
+                <img src="../assets/images/light.png" alt="">
             </div>
             <div class="top-header">
-                <img src="/static/images/congrad@3x.png" alt="">
+                <img src="../assets/images/congrad@3x.png" alt="">
             </div>
             <div class="box-container">
                 <div class="red-part">
@@ -18,8 +18,8 @@
                     </span> -->
                     <div class="prize-img">
                          <span @click.stop="toBuy"><img v-if="result.gift_img&&result.is_subscribe" :src="result.gift_img" alt=""></span>
-                        <img v-if="!result.is_subscribe" src="/static/images/qrcode.png" alt="">
-                        <!-- <img v-else src="/static/images/tissue@3x.png" /> -->
+                        <img v-if="!result.is_subscribe" src="../assets/images/qrcode.png" alt="">
+                        <!-- <img v-else src="../assets/images/tissue@3x.png" /> -->
                     </div>
                     <div v-if="result.open_time&&result.is_subscribe">开奖时间：{{result.open_time}}</div>
                     <!-- 未关注 -->
@@ -30,13 +30,13 @@
                     <div class="buttons" style="margin-bottom:10px">
                         <div class="buttons" style="margin-top:10px">
                             <span style="margin-right:10px" class="raise-button red" @click="again()">
-                                <img class="gold" src="/static/images/gold3@3x.png" alt="">
+                                <img class="gold" src="../assets/images/gold3@3x.png" alt="">
                                 <span class="yellow-text">{{result.use_gold}}</span>
                                 再接再厉
                             </span>
                             <span class="raise-button red" @click="goHome">其他奖品</span>
                             <span class="raise-button orange" @click="share">
-                                <img src="/static/images/back@3x.png" alt="">
+                                <img src="../assets/images/back@3x.png" alt="">
                             </span>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
         <!-- 很遗憾 -->
         <div class="container" v-else>
             <div class="top-header">
-                <img src="/static/images/sad@3x.png" alt="">
+                <img src="../assets/images/sad@3x.png" alt="">
             </div>
             <div class="box-container">
                 <div class="red-part fail">
@@ -61,20 +61,20 @@
                     </div>
                 </div>
                 <div class="fail-img">
-                    <img src="/static/images/cry@3x.png" />
+                    <img src="../assets/images/cry@3x.png" />
                 </div>
                 <div class="white-part fail">
                     离获得抽奖机会只剩
                     <span class="red-text large-text">{{totalNum-rightNum}}</span> 题
                     <div class="buttons" style="margin-top:10px">
                         <span style="margin-right:10px" class="raise-button red" @click="again()">
-                            <img class="gold" src="/static/images/gold3@3x.png" alt="">
+                            <img class="gold" src="../assets/images/gold3@3x.png" alt="">
                             <span class="yellow-text">{{gold}}</span>
                             再接再厉
                         </span>
                         <span class="raise-button red" @click="goHome">其他奖品</span>
                         <span class="raise-button orange" @click="share">
-                            <img src="/static/images/back@3x.png" alt="">
+                            <img src="../assets/images/back@3x.png" alt="">
                         </span>
                     </div>
                     <small class="hint">邀请好友共同参与，还能获得更多金币哦</small>

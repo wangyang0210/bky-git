@@ -1,6 +1,6 @@
 require('./check-versions')()
 
-process.env.NODE_ENV = 'production'
+process.env.NODE_ENV = 'development'
 process.env.PLATFORM = process.argv[process.argv.length - 1] || 'wx'
 
 var ora = require('ora')

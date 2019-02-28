@@ -3,7 +3,7 @@
       <div class="container">
         <div class="box-container">
             <div class="img">
-              <img src="/static/images/no-coin.png" alt="">
+              <img src="../assets/images/no-coin.png" alt="">
             </div>
             <div class="text">囊中羞涩，邀请好友可免费获得5个金币哦</div>
             <div class="buttons">

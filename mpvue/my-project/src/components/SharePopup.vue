@@ -2,7 +2,7 @@
     <van-popup v-model="shareUrls" id="shareUrls" overlay-class="share-bg" position="top" :overlay="true">
           <!-- <div class='popContainerShare'> -->
               <div class="point-img">
-                  <img class="" src="/static/images/point.png">
+                  <img class="" src="../assets/images/point.png">
                   <span>邀请好友一起参与活动，共同获得金币</span>
               </div>
           <!-- </div> -->
