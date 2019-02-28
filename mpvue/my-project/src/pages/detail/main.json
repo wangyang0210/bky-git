@@ -1,5 +1,5 @@
 {
-    "navigationBarTitleText": "商品详情",
+    "navigationBarTitleText": "奖品详情",
     "usingComponents": {
         "van-action-sheet": "/static/vant/cell-group/index",
         "van-area": "/static/vant/area/index",

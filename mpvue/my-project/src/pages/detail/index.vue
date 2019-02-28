@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="page">
-      <van-nav-bar title="奖品详情" left-text="返回" left-arrow @click-left="onClickLeft"/>
+      <van-nav-bar title="奖品详情" left-text="返回" left-arrow @click="onClickLeft"/>
       <div class="top-time" v-if="detail.live_status==1||detail.live_status==2">
         距离开奖时间只剩：
         <span class="red-text" v-if="detail.gift_info">{{detail.gift_info.open_time}}</span>
@@ -158,14 +158,14 @@
       <span class="flat-button red" v-if="detail.live_status!='1'" @click.stop="toBuy">优惠购买</span>
       <div v-else>
         <span class="flat-button yellow" style="width:40%" @click.stop="toBuy">优惠购买</span>
-        <span class="flat-button red" style="width:40%" @click="enterGame">
+        <span class="flat-button red" style="width:40%" @click.stop="enterGame">
           <span class="yellow-text price">
             <img class="gold" src="/static/images/gold@3x.png" alt>
             {{detail.gift_info?detail.gift_info.use_gold:'-'}}
           </span>
           立即答题
         </span>
-        <span class="flat-button red" style="width:20%" @click="openRules">
+        <span class="flat-button red" style="width:20%" @click.stop="openRules">
           <van-icon name="question-o"  />
         </span>
         <span class="free-text">
@@ -176,10 +176,15 @@
         </span>
       </div>
     </div>
+     <game-rules ref="rules"></game-rules>
   </div>
 </template>
 <script>
+import GameRules from "@/components/GameRules";
 export default {
+  components: {
+            "game-rules":GameRules
+        },
   data() {
     return {
       // status: '',
@@ -249,8 +254,28 @@ export default {
     };
   },
   created() {
-    // this.detail.gift_info.img_detail = this.detail.gift_info.img_detail.replace(/\<img/gi, '<img style="max-width:100%;height:auto" ');
-  }
+    this.detail.gift_info.img_detail = this.detail.gift_info.img_detail.replace(/\<img/gi, '<img style="max-width:100%;height:auto" ');
+  },
+  methods: {
+    onClickLeft() {
+       mpvue.reLaunch({ url: "/pages/index/main" });
+    },
+    openRules() {
+      this.$refs.rules.openRules();
+        },
+    toBuy() {
+       if (this.detail.gift_info.url) {
+                console.log(this.detail.gift_info.url);
+            } else {
+                mpvue.showToast({
+                  title: '商家正在备货中..', 
+                  icon: 'loading', 
+                  duration: 2000, 
+                  mask: true, 
+                });
+            }
+    }
+  },
 };
 
 
@@ -322,7 +347,7 @@ function decodeUnicode(str) {
 }
 .badge-box {
   position: relative;
-  z-index:99999;
+  z-index:5;
 
   .badge {
     position: absolute;

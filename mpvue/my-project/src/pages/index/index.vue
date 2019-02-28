@@ -1,59 +1,43 @@
 <template>
   <div>
     <!-- 顶部切换 -->
-    <van-tabs class="custom" :active="active" color="#fff" :line-width="0">
-      <!-- <van-tab v-for="tab in tabs" :key="tab.title">
-        <div slot="title">
-          {{tab.day}}
-          <div class="status">{{tab.status}}</div>
-        </div>
-      </van-tab> -->
-      <van-tab title="星期一">内容 1</van-tab>
-      <van-tab title="星期二">内容 2</van-tab>
-      <van-tab title="今天">内容 3</van-tab>
-      <van-tab title="星期四">内容 4</van-tab>
-      <van-tab title="星期五">内容 5</van-tab>
-    </van-tabs>
+    <top-tabs @changeTab="changeDate"></top-tabs>
+    <div class="list" v-for="d in getAllDates" :key="d" v-show="d==date">
+      <prize-list :list="allGames[d]" :refreshMethod="getAllGames" @clickItem="clickItem"></prize-list>
+    </div>
     <div class="hint" @click="showHint()">
       <img src="/static/images/hint.png" alt>
     </div>
-    <!-- <hint-popup ref="hint"></hint-popup> -->
+    <hint-popup ref="hint"></hint-popup>
   </div>
 </template>
 <script>
+import TopTabs from "@/components/TopTabs";
+import HintPopup from "@/components/HintPopup";
 export default {
   data() {
     return {
-      active: 2,
-      tabs: [
-        {
-          day: "1",
-          date: "2019-02-25",
-          status: "已结束"
-        },
-        {
-          day: "2",
-          date: "2019-02-26",
-          status: "已结束"
-        },
-        {
-          day: "3",
-          date: "2019-02-27",
-          status: "正在进行"
-        },
-        {
-          day: "4",
-          date: "2019-02-28",
-          status: "即将开始"
-        },
-        {
-          day: "5",
-          date: "2019-03-01",
-          status: "即将开始"
-        }
-      ]
+
     };
-  }
+  },
+   components: {
+    "top-tabs": TopTabs,
+    "hint-popup": HintPopup
+  },
+  methods: {
+     showHint() {
+      this.$refs.hint.open();
+    },
+    openGameRules() {
+      this.$refs.rules.openRules();
+    },
+    changeDate(date) {
+      this.$store.commit({
+        type: "setCurrentDate",
+        date: date
+      });
+    },
+  },
 };
 </script>
 

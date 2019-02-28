@@ -1,7 +1,7 @@
 {
     "pages": [
-        "pages/detail/main",
         "pages/index/main",
+        "pages/detail/main",
         "pages/my/main",
         "pages/my/prize/main",
         "pages/my/join/main",

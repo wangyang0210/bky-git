@@ -1,28 +1,26 @@
 <template>
-    <van-popup class="game-rules custom" v-model="showRules">
+    <van-popup class="game-rules custom" :show="showRules">
         <div class="container">
             <div class="top-header">
-                <img src="../assets/images/knot@3x.png" alt="">
+                <img src="/static/images/knot@3x.png" alt="">
             </div>
             <div class="box-container">
                 <div class="first"></div>
-                <div class="second">
+               <div class="second">
                     <div class="title">活动规则</div>
                     <div class="detail">
-                        <!-- 答题 -->
                         <div class="detail-title">
-                            <img src="../assets/images/rule@3x.png" alt="">
+                            <img  src="/static/images/rule@3x.png" alt="">
                             答题
                         </div>
                         <div class="detail-item">
                             <p>1. 答题一次消耗该场奖品所对应的金币数量</p>
                             <p>2. 答题过程中超时未作答或选错答案便终止答题</p>
                             <p>3. 每题有20秒选择时间，全部答对即可获得抽奖机会</p>
-                            <!-- <p>4. 每个奖品最多可答题20次</p> -->
                             <p>4.抽奖机会越多中奖机会越大</p>
                         </div>
                         <div class="detail-title">
-                            <img src="../assets/images/rule@3x.png" alt="">
+                            <img  src="/static/images/rule@3x.png" alt="">
                             开奖
                         </div>
                         <div class="detail-item">
@@ -30,7 +28,7 @@
                             <p>2.中奖结果可在“我的”-“奖品记录”中查看</p>
                         </div>
                         <div class="detail-title">
-                            <img src="../assets/images/rule@3x.png" alt="">
+                            <img  src="/static/images/rule@3x.png" alt="">
                             领奖
                         </div>
                         <div class="detail-item">
@@ -41,7 +39,7 @@
                     <span class="iknow raise-button orange" @click="clickBtn">知道了</span>
                     <div class="hint">最终解释权归上海沉甸数字技术有限公司所有</div>
                 </div>
-            </div>
+            </div> 
         </div>
     </van-popup>
 </template>
@@ -71,22 +69,27 @@
     }
 </script>
 
-<style lang="less" scoped>
-    .van-popup.game-rules {
 
+<style lang="less" scoped>
+  
+      .game-rules {
         color: #fff;
         font-size: 12px;
-
+        text-align: center;
+        /deep/.van-popup {
+         background: none !important;
+        }
         .top-header {
-            top: -50px;
-
-            img {
-                width: 216px;
+            position: relative;
+            top: 10px;
+            image {
+                width: 210px;
+                height: 65px;
             }
         }
 
         .first {
-            width: 100%;
+            width: 343px;
             height: 42px;
             border-radius: 8px;
             background: linear-gradient(to bottom, #F47979, #E54444);
@@ -109,9 +112,9 @@
                 margin-top: 8px;
                 margin-bottom: 8px;
                 font-weight: bold;
-                img {
-                    width: 15px;
-                    height: 15px;
+                image {
+                    width: 15px !important;
+                    height: 15px !important;
                     margin-right: 5px;
                     vertical-align: text-top;
                 }
